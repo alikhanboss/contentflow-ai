@@ -12,3 +12,55 @@
 @media(max-width:390px){.container{width:calc(100% - 32px)}.hero h1{font-size:43px}.hero-buttons .btn{font-size:10px;padding:12px}.hero-benefits{font-size:8px;gap:8px}.product-stage{height:385px}.preview-heading h3{font-size:10px}.preview-columns{gap:7px}.preview-main{padding:15px 9px}.preview-sidebar{width:31px}.mini-label{font-size:6px}.generation-mini p{font-size:7px}.mini-input{font-size:6px}.mini-tags span{font-size:5px}.instagram-mini p{font-size:6px}.instagram-mini img{height:105px}.floating-card b{font-size:9px}.preview-caption{font-size:5px}.orbit-two{width:310px}.orbit-one{width:310px}.feature-card{padding:20px 14px}.feature-card h3{font-size:13px}.feature-card p{font-size:10px}.feature-card>span:last-child{font-size:7px}.audience-card button{font-size:8px}.workspace{padding-inline:15px}.workspace-heading h1{font-size:25px}.tone-options button{font-size:9px}.form-section-heading>span:last-child{display:none}.business-form{padding:20px 16px}.modal-footer .btn{font-size:10px}.export-bar .btn{font-size:8px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* Warm coral accents and a little extra depth for the landing page. */
+:root{--coral:#cf836b;--coral-soft:#faeee8;--ink-soft:#294d4a}
+.hero{position:relative;isolation:isolate}
+.hero:before{content:"";position:absolute;z-index:-1;pointer-events:none;width:380px;height:380px;left:-125px;top:-18px;border-radius:50%;background:radial-gradient(circle,#faeee8a6 0%,#faeee852 38%,transparent 72%)}
+.hero:after{content:"";position:absolute;z-index:-1;pointer-events:none;right:2%;top:5%;width:110px;height:110px;opacity:.32;background-image:radial-gradient(#cf836b 1px,transparent 1px);background-size:12px 12px;mask-image:linear-gradient(135deg,#000,transparent 78%)}
+.hero h1{animation:headline-arrive .8s cubic-bezier(.2,.75,.25,1) both}
+.hero h1>span:not(.headline-dot){position:relative;display:inline-block;animation:highlight-arrive .75s .16s cubic-bezier(.2,.75,.25,1) both}
+.hero h1>span:not(.headline-dot):after{content:"";height:5px;position:absolute;left:2px;right:4px;bottom:1px;border-radius:6px;background:linear-gradient(90deg,#cf836b8a,#f3b77b9c);transform:scaleX(0);transform-origin:left;animation:underline-arrive .65s .65s ease-out forwards;z-index:-1}
+.headline-dot{color:var(--coral)}
+.hero-pill{box-shadow:0 5px 18px #cf836b12;animation:pill-arrive .6s ease-out both}
+.pill-star{color:var(--coral);animation:star-pulse 3s 1s ease-in-out infinite}
+.hero-description{animation:fade-up .7s .24s both}
+.hero-buttons{animation:fade-up .7s .34s both}
+.hero-benefits{animation:fade-up .7s .43s both}
+.product-stage{animation:preview-arrive .9s .12s cubic-bezier(.2,.75,.25,1) both}
+.orbit-one{background:radial-gradient(circle at 40% 40%,#e4eddf 0%,#f5eae069 55%,transparent 73%)}
+.orbit-two{border-color:#e8d9ce}
+.section-heading .eyebrow,.final-cta .eyebrow{display:inline-flex;align-items:center;gap:8px}
+.section-heading .eyebrow:before,.final-cta .eyebrow:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 4px #cf836b1c}
+.problem-card,.feature-card,.audience-card{position:relative;overflow:hidden}
+.problem-card:after,.feature-card:after,.audience-card:after{content:"";position:absolute;right:-32px;top:-32px;width:78px;height:78px;border:1px solid #cf836b26;border-radius:50%;pointer-events:none;transition:transform .3s ease,opacity .3s ease;opacity:.55}
+.problem-card:hover:after,.feature-card:hover:after,.audience-card:hover:after{transform:scale(1.45);opacity:.9}
+.problem-card:nth-child(2) .icon-box,.feature-card:nth-child(3n+2) .icon-box{background:var(--coral-soft);color:var(--coral)}
+.feature-card:nth-child(3n) .icon-box{background:#edf0f8;color:#7382a9}
+.feature-card>span:last-child{color:#648b79}
+.feature-card:hover{border-color:#d6e5d9}
+.how-section{background:linear-gradient(135deg,#eef3eb 0%,#f2f1e9 100%);position:relative;overflow:hidden}
+.how-section:after{content:"";position:absolute;right:-95px;top:-110px;width:280px;height:280px;border:1px solid #cf836b25;border-radius:50%;box-shadow:0 0 0 24px #cf836b08,0 0 0 48px #cf836b06;pointer-events:none}
+.step-top>span{color:#ba907e}
+.step-top svg{color:#668d7c}
+.audience-card{transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}
+.audience-card:hover{transform:translateY(-4px);border-color:#d8c9bd;box-shadow:0 13px 27px #173c3b0d}
+.audience-art.sand{background:linear-gradient(145deg,#f5ede2,#f4e8df);color:#b07e65}
+.audience-art.pink{background:linear-gradient(145deg,#f7e9e5,#f3e8ec);color:#b17b77}
+.audience-art.blue{background:linear-gradient(145deg,#e8eeee,#e9edf4);color:#7382a9}
+.final-cta{background:radial-gradient(ellipse at 100% 0%,#4b786e 0%,transparent 39%),var(--teal)}
+.final-cta:before{content:"";position:absolute;left:5%;top:15%;width:66px;height:66px;border:1px solid #cf836b66;border-radius:50%;box-shadow:0 0 0 12px #cf836b0d,0 0 0 25px #cf836b08;pointer-events:none}
+.light-btn{box-shadow:0 5px 18px #e4efdf24}
+.light-btn:hover{background:#fff6ed}
+.footer .logo-icon i:first-child{background:var(--coral)}
+.icon-box{transition:transform .24s ease,background .24s ease}
+.feature-card:hover .icon-box,.problem-card:hover .icon-box{transform:rotate(-5deg) scale(1.06)}
+@keyframes headline-arrive{from{opacity:0;transform:translateY(17px);filter:blur(4px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes highlight-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes underline-arrive{to{transform:scaleX(1)}}
+@keyframes pill-arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fade-up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes preview-arrive{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes star-pulse{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.18) rotate(12deg)}}
+@media(max-width:760px){.hero:before{width:260px;height:260px;left:-120px;top:-8px}.hero:after{right:0;top:9%;width:70px;height:70px}.hero h1>span:not(.headline-dot):after{height:4px}.how-section:after{width:170px;height:170px;right:-100px;top:-80px}.final-cta:before{width:42px;height:42px;left:8px;top:8px}}
+@media(prefers-reduced-motion:reduce){.hero h1,.hero h1>span:not(.headline-dot),.hero h1>span:not(.headline-dot):after,.hero-pill,.pill-star,.hero-description,.hero-buttons,.hero-benefits,.product-stage{animation:none!important}.hero h1>span:not(.headline-dot):after{transform:scaleX(1)}}
